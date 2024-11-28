@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/Bckground%202.gif');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.panel {
+    display: flex;
+    align-items: center;   
+}
+
+.panel h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-right: 20px; /* Space between title and buttons */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Space between buttons */
+}
+
+button#intro,#ack,#game,.mod,.quiz {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #007bff00;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#intro:hover,#ack:hover,#game:hover,.mod:hover,.quiz:hover {
+    background-color: #a0a0a0;
+}
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+button#noli,#elfili{
+    font-size: 20px; 
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    margin: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #a0a0a0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

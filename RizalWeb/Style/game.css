@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/gamebg.jpg');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+button {
+    width: 100px; 
+    height: 100px;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #007BFF; 
+    color: white; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px; 
+}
+
+button#hman {
+        width: 100px;
+        height: 100px; 
+        background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/buttonbg.png');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        border: none; 
+        border-radius: 10px; 
+        cursor: pointer; 
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+        transition: all 0.3s ease; 
+    }
+
+button#hman:hover {
+    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/btnHover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+}
