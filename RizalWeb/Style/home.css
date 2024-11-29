@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/Bckground%202.gif');
+    background-image: url('../Image/Bckground%202.gif');
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
@@ -72,15 +72,66 @@ button#intro:hover,#ack:hover,#game:hover,.mod:hover,.quiz:hover {
     display: block;
 }
 
-button#noli,#elfili{
-    font-size: 20px; 
-    padding: 15px 30px; 
-    border-radius: 10px; 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
+/* Center the buttons */
+.button-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    
+}
+
+button#noli, button#elfili {
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* Add image background */
+    background-image: url('../Image/Noli.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Set fixed width for larger buttons */
+    height: 500px; /* Set fixed height for larger buttons */
+}
+ button#elfili {
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* Add image background */
+    background-image: url('../Image/elfili.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Set fixed width for larger buttons */
+    height: 500px; /* Set fixed height for larger buttons */
+}
+
+/* Hover effects */
+button#noli:hover, button#elfili:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white; /* Ensure text remains visible */
 }
 
 .dropdown-content a:hover {

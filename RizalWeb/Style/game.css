@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/gamebg.jpg');
+    background-image: url('../Image/gamebg.jpg');
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
@@ -34,7 +34,7 @@ p {
 button#hman {
         width: 100px;
         height: 100px; 
-        background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/buttonbg.png');
+        background-image: url('../Image/buttonbg.png');
         background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat;
@@ -46,9 +46,9 @@ button#hman {
     }
 
 button#hman:hover {
-    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/btnHover.jpg');
+    background-image: url('../Image/btnhover.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center;    
     background-repeat: no-repeat;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
 }

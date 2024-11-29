@@ -1,5 +1,5 @@
 body {
-    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/Bckground%202.gif');
+    background-image: url('../Image/Bckground%202.gif');
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 

@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image:  url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/build-hangman-game-html-javascript/Hangman%20Game/images/Gamebimg.png');
+    background-image:  url('./images/Gamebimg.png');
     background-size: cover, contain;
     background-position: center, center;
 }
