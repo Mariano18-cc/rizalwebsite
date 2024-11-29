@@ -15,13 +15,15 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+   
+
 }
 
 .panel {
     display: flex;
-    align-items: center;   
+    align-items: center;  
+    background-color: transparent; /* Make the panel completely transparent */
+  
 }
 
 .panel h1 {
@@ -36,7 +38,7 @@ body {
     gap: 2px; /* Space between buttons */
 }
 
-button#intro,#ack,#game,.mod,.quiz {
+button#intro, #ack, #game, .mod, .quiz {
     padding: 8px 12px;
     font-size: 1rem;
     background-color: #007bff00;
@@ -44,41 +46,74 @@ button#intro,#ack,#game,.mod,.quiz {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
 }
 
-button#intro:hover,#ack:hover,#game:hover,.mod:hover,.quiz:hover {
-    background-color: #a0a0a0;
+button#intro:hover, #ack:hover, #game:hover, .mod:hover, .quiz:hover {
+    background-color: rgba(239, 239, 239, 0.6); 
 }
+
+
 /* Dropdown styles */
+/* Dropdown Container */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Dropdown Menu */
 .dropdown-content {
-    display: none;
+    display: none; /* Hide dropdown menu initially */
     position: absolute;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 6px; /* Rounded corners */
     z-index: 1;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity and visibility */
 }
 
+/* Dropdown links */
 .dropdown-content a {
-    color: black;
-    padding: 10px 12px;
+    color: #333; /* Dark text for readability */
+    padding: 12px 20px; /* Added padding for better spacing */
     text-decoration: none;
     display: block;
+    font-size: 14px; /* Font size for better readability */
+    border-bottom: 1px solid #f1f1f1; /* Light border between items */
+    transition: background-color 0.3s, padding-left 0.3s; /* Smooth transition for hover effect */
 }
+
+/* Dropdown link hover effect */
+.dropdown-content a:hover {
+    background-color: #007bff; /* Accent color on hover */
+    color: white; /* Text color change on hover */
+    padding-left: 20px; /* Add slight padding effect for hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Make the dropdown visible */
+    opacity: 1; /* Make the dropdown visible */
+    visibility: visible; /* Ensure the dropdown is visible */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+/* Optional: Change background of the dropdown button on hover */
+.dropdown:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Slight darkening of the button background */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
 
 /* Center the buttons */
 .button-center {
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
-    
 }
 
 button#noli, button#elfili {
@@ -103,7 +138,8 @@ button#noli, button#elfili {
     width: 300px; /* Set fixed width for larger buttons */
     height: 500px; /* Set fixed height for larger buttons */
 }
- button#elfili {
+
+button#elfili {
     font-size: 20px;
     padding: 15px 30px;
     border-radius: 10px;

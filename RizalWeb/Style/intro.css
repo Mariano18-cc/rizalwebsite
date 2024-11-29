@@ -1,18 +1,47 @@
 body {
-    background-image: url('file:///C:/Users/Jay%20Prince/OneDrive/Desktop/RizalWeb/Image/Bckground%202.gif');
-background-size: cover;  
-background-position: center; 
-background-repeat: no-repeat; 
-height: 100vh; 
-margin: 0; 
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: x-large;
+    background-image: url('../Image/Bckground%202.gif');
+    background-size: cover; /* Ensures the background covers the viewport */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; /* Ensures the body always fills the viewport */
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif; /* Professional font */
+    color: #333; /* Dark text for contrast */
+    text-align: justify;
+    line-height: 1.8; /* Improved readability */
+}
+
+/* Ensuring the image adjusts on smaller devices */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust for smaller screens */
+    }
 }
 
 .panel {
     display: flex;
-    align-items: center;   
-    background-color: rgba(255, 255, 255, 0.354);
+    flex-direction: column; /* Stack heading and text */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Lighter background for readability */
+    padding: 30px;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 800px; /* Restrict content width */
+    text-align: center; /* Center-align content */
 }
+
+h1#intro {
+    font-size: 36px; /* Larger and bold title */
+    margin-bottom: 20px; /* Add spacing below heading */
+    color: #000000; /* Accent color for title */
+    text-transform: uppercase; /* Professional touch */
+}
+
+p {
+    font-size: 18px; /* Standard readable size */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
