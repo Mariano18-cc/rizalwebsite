@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Game JavaScript | CodingNepal</title>
+    <title>Hangman Game</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts/word-list.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
+    <!-- Modal for game over -->
     <div class="game-modal">
         <div class="content">
-            <img src="#" alt="gif">
+            <img src="#" alt="Game status image">
             <h4>Game Over!</h4>
-            <p>The correct word was: <b>rainbow</b></p>
+            <p>The correct word was: <b></b></p>
             <button class="Next">Next</button>
         </div>
     </div>
+    <!-- Main game container -->
     <div class="container">
         <div class="hangman-box">
-            <img src="#" draggable="false" alt="hangman=-img">
+            <img src="#" draggable="false" alt="Hangman image">
             <h1>Save Rizal</h1>
         </div>
         <div class="game-box">
             <ul class="word-display"></ul>
             <h4 class="hint-text">Hint: <b></b></h4>
-            <h4 class="guesses-text">Incorrect guesses: <b></b></h4>
+            <h4 class="guesses-text">Incorrect guesses: <b>0 / 6</b></h4>
             <div class="keyboard"></div>
         </div>
     </div>
