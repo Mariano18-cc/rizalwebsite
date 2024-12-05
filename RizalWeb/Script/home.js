@@ -1,29 +1,54 @@
-document.addEventListener('DOMContentLoaded', function() {  
 
-    document.getElementById('intro').addEventListener('click', function() {
-        window.location.href = 'intro.html';
-    });
-    document.getElementById('ack').addEventListener('click', function() {
-        window.location.href = 'ack.html';
-    });
+// Local images array
+const images = [
+    'RizalWeb/Module/module 1 (PICTURES)/lesson 1/1.jpg',
+    'RizalWeb/Module/module 1 (PICTURES)/lesson 1/2.jpg',
+    'RizalWeb/Module/module 1 (PICTURES)/lesson 1/3.jpg',
+    // Add more images here as needed
+];
 
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-        const button = dropdown.querySelector('button');
-        const content = dropdown.querySelector('.dropdown-content');
+let currentIndex = 0;
 
-        button.addEventListener('click', function(event) {
-            event.stopPropagation();
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+// DOM Elements
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const closeModalButton = document.querySelector('.close');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const viewImagesButton = document.getElementById('viewImages');
 
-        window.addEventListener('click', function(event) {
-            if (!dropdown.contains(event.target)) {
-                content.style.display = 'none';
-            }
-        });
-    });
+// Open modal when clicking "View Images" link
+viewImagesButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link action
+    modal.style.display = 'block';
+    showImage(currentIndex);
+});
 
-    document.getElementById('game').addEventListener('click', function() {
-        window.location.href = 'game.html';
-    });
+// Close modal
+closeModalButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Show specific image
+function showImage(index) {
+    modalImage.src = images[index];
+}
+
+// Navigate to previous image
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
+
+// Navigate to next image
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+});
+
+// Close modal when clicking outside of content
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 });
