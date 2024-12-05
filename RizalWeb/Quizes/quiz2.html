@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Module 2: Quiz#2</h2>
+        
+        <div id="quiz">
+            <div class="question">
+                <label for="q1">1. Which of the following is not one of Dr. Jose Rizal's many talents and accomplishments as described in the text?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) Ophthalmologist</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) Economist</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) Architect</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) Playwright</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="q2">2. Who was Dr. Jose Rizal's first teacher and mentor, according to the text?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) His father, Don Francisco</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) His uncle</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) His mother</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) His tutor in Manila</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q3">3. What prompted Dr. Jose Rizal to move to Manila and study at Ateneo de Manila?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) He wanted to study under the Jesuits</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) His brother Paciano convinced him to move after the execution of the GOMBURZA</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) He was forced to leave his hometown due to political pressure</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) He received a scholarship offer from Ateneo</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q4">4. Why did Rizal's mother initially oppose his pursuit of higher education?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) She believed he was not intelligent enough.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) She feared that too much education could harm him.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) She thought education was unnecessary.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) She wanted him to join the Dominican order instead.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q5">5. What challenges did Rizal face while studying at the University of Santo Tomas?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) Lack of financial support from his family.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) Frequent illness and poor health.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) Racial discrimination and outdated teaching methods.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) Competition from other Filipino students.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">Quiz Results</div>
+            <div class="modal-body">
+                <span id="scoreMessage"></span>
+            </div>
+            <div class="modal-footer">
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = {
+                q1: "C",
+                q2: "C",
+                q3: "B",
+                q4: "B",
+                q5: "C"
+            };
+
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            for (let question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
+            document.getElementById('myModal').style.display = "flex";
+            resetQuiz();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function resetQuiz() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(button => button.checked = false);
+        }
+    </script>
+</body>
+</html>

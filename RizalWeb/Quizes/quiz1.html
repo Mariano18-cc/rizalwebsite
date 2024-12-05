@@ -3,249 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz with Modal Pop-up</title>
-    <style>
-        body {
-            background-image: url('../Image/Bckground%202.gif');
-            background-size: cover; /* Ensures the background covers the viewport */
-            background-position: center; 
-            background-repeat: no-repeat; 
-            min-height: 100vh; /* Ensures the body fills the viewport */
-            margin: 0; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial', sans-serif; /* Professional font */
-            color: #333; /* Dark text for better contrast */
-            text-align: justify;
-            line-height: 1.8; /* Improved readability */
-        }
-
-        .quiz-container {
-            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for better background effect */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 350px; /* Increased width for better spacing */
-            text-align: center;
-        }
-
-        .question {
-            font-size: 18px;
-            margin-bottom: 15px;
-            text-align: left; /* Align question text to the left */
-        }
-
-        .answers {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px; /* Space between choices */
-            margin-bottom: 15px;
-            text-align: left; /* Align answer options to the left */
-        }
-
-        .answer {
-            display: flex;
-            align-items: center;
-        }
-
-        .answer input {
-            margin-right: 10px; /* Space between radio and label */
-        }
-
-        button {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Modal styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 300px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-header {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .modal-body {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .modal-footer {
-            text-align: center;
-        }
-
-        .close {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 
     <div class="quiz-container">
-        <h2>Simple Quiz</h2>
+        <h2>Module 1: Quiz#1</h2>
         
         <div id="quiz">
             <div class="question">
-                <label for="q1">1. What is the capital of France?</label>
+                <label for="q1">1. What does the Rizal Law (Republic Act 1425) mandate for higher educational institutions (HEIs) in the Philippines?</label>
                 <div class="answers">
                     <div class="answer">
-                        <input type="radio" name="q1" value="Paris" class="answer"> 
-                        <label>Paris</label>
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) To include a course on Philippine history</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q1" value="London" class="answer"> 
-                        <label>London</label>
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) To include a course on the life, works, and writings of Dr. Jose Rizal</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q1" value="Berlin" class="answer"> 
-                        <label>Berlin</label>
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) To teach only the novels "Noli Me Tangere" and "El Filibusterismo"</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q1" value="Madrid" class="answer"> 
-                        <label>Madrid</label>
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) To focus on the Catholic Church’s role in Philippine history</label>
                     </div>
                 </div>
             </div>
             
             <div class="question">
-                <label for="q2">2. What is 5 + 3?</label>
+                <label for="q2">2. According to the Catholic Bishops Conference of the Philippines (CBCP), what was their primary objection to the Rizal Bill?</label>
                 <div class="answers">
                     <div class="answer">
-                        <input type="radio" name="q2" value="8" class="answer"> 
-                        <label>8</label>
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) The bill required the teaching of Philippine history</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q2" value="7" class="answer"> 
-                        <label>7</label>
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) The bill promoted anti-Catholic and anti-friar themes in Rizal's novels</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q2" value="9" class="answer"> 
-                        <label>9</label>
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) The bill encouraged the promotion of Catholic teachings</label>
                     </div>
                     <div class="answer">
-                        <input type="radio" name="q2" value="10" class="answer"> 
-                        <label>10</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <label for="q3">3. Which planet is known as the Red Planet?</label>
-                <div class="answers">
-                    <div class="answer">
-                        <input type="radio" name="q3" value="Mars" class="answer"> 
-                        <label>Mars</label>
-                    </div>
-                    <div class="answer">
-                        <input type="radio" name="q3" value="Earth" class="answer"> 
-                        <label>Earth</label>
-                    </div>
-                    <div class="answer">
-                        <input type="radio" name="q3" value="Venus" class="answer"> 
-                        <label>Venus</label>
-                    </div>
-                    <div class="answer">
-                        <input type="radio" name="q3" value="Jupiter" class="answer"> 
-                        <label>Jupiter</label>
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) The bill excluded the teachings of Noli Me Tangere and El Filibusterismo from the curriculum</label>
                     </div>
                 </div>
             </div>
 
-            <button onclick="submitQuiz()">Submit</button>
+            <div class="question">
+                <label for="q3">3. Which of the following amendments was made to the Rizal Bill during its passage to address concerns from its critics?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) The inclusion of other historical novels alongside Rizal’s works</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) The compulsory teaching of Noli Me Tangere and El Filibusterismo in elementary and secondary schools</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) The requirement that only the works of Filipino authors be studied in universities</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) The modification that Noli Me Tangere and El Filibusterismo would only be compulsory in college, not in basic education</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q4">4. What is ironic about the recognition of Dr. Jose Rizal as national heroes of the Philippines?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) There is a law explicitly declaring Dr. Jose Rizal as national heroes</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) Dr. Jose Rizal is not officially declared national heroes by law, despite his significant contributions</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) The country celebrates his birthdays but has no official recognition of him as national heroes</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) The Philippines has laws that only recognize Dr. Jose Rizal as a national hero but not Andres Bonifacio</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q5">5. Which American commission established the criteria and standards for recognizing a National Hero in the Philippines during the American regime?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) The Taft Commission</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) The Schurman Commission</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) The Jones Commission</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) The Philippine Commission</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
+    <div class="modal" id="myModal">
         <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Your Score</h2>
-            </div>
+            <div class="modal-header">Quiz Results</div>
             <div class="modal-body">
-                <p id="scoreMessage">Your score: </p>
+                <span id="scoreMessage"></span>
             </div>
             <div class="modal-footer">
-                <button onclick="closeModal()">Close</button>
+                <button class="close" onclick="closeModal()">Close</button>
             </div>
         </div>
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
         function submitQuiz() {
             let score = 0;
 
-            // Get answers from the form
             const answers = {
-                q1: "Paris",
-                q2: "8",
-                q3: "Mars"
+                q1: "B",
+                q2: "B",
+                q3: "D",
+                q4: "B",
+                q5: "B"
             };
 
-            // Check the answers
             const userAnswers = {
                 q1: document.querySelector('input[name="q1"]:checked')?.value,
                 q2: document.querySelector('input[name="q2"]:checked')?.value,
-                q3: document.querySelector('input[name="q3"]:checked')?.value
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
             };
 
-            // Calculate score
             for (let question in answers) {
                 if (userAnswers[question] === answers[question]) {
                     score++;
                 }
             }
 
-            // Show result in the modal
-            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 3`;
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
             document.getElementById('myModal').style.display = "flex";
-
-            // Reset the quiz after closing the modal
             resetQuiz();
         }
 
@@ -254,11 +179,9 @@
         }
 
         function resetQuiz() {
-            // Reset all radio buttons
             const radioButtons = document.querySelectorAll('input[type="radio"]');
             radioButtons.forEach(button => button.checked = false);
         }
     </script>
-
 </body>
 </html>

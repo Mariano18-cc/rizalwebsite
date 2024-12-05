@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Module 3: Quiz#3</h2>
+        
+        <div id="quiz">
+            <div class="question">
+                <label for="q1">1. When did Rizal disembark in Manila during his second homecoming?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) February 3, 1888</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) December 31, 1891</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) June 26, 1892</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) Noon of June 26, 1891</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="q2">2. What was one of the primary reasons Rizal decided to return to the Philippines in 1887?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) To continue his studies.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) To fight Spanish authorities directly.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) To operate on his mother's cataracts and address family concerns.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) To distribute copies of *Noli Me Tangere* himself.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q3">3. What was the reaction of Governor-General Terrero upon learning about *Noli Me Tangere*?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) He asked Rizal to explain the book's contents.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) He requested a copy to read for himself.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) He condemned the book and ordered Rizal's arrest.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) He ignored the book, considering it unimportant.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">Quiz Results</div>
+            <div class="modal-body">
+                <span id="scoreMessage"></span>
+            </div>
+            <div class="modal-footer">
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = {
+                q1: "C",
+                q2: "C",
+                q3: "C"
+            };
+
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value
+            };
+
+            for (let question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 3`;
+            document.getElementById('myModal').style.display = "flex";
+            resetQuiz();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function resetQuiz() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(button => button.checked = false);
+        }
+    </script>
+</body>
+</html>
