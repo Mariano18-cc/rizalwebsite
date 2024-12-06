@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>Module 7: Quiz#7</h2>
+        
+        <div id="quiz">
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="q1">1. Which novel highlights the theme of liberation from Spain and portrays family devotion, self-sacrifice, and patriotism?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) El Filibusterismo</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) Noli Me Tangere</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) Uncle Tom’s Cabin</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) Both novels</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="q2">2. Who is the main character in El Filibusterismo and what is his disguised identity?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) Crisostomo Ibarra as Simoun</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) Basilio as Elias</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) Padre Florentino as Simoun</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) Maria Clara as a nun</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="q3">3. What were the objectives of El Filibusterismo according to the module?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) Defend Filipinos from accusations, show their life under colonial rule, discuss religion’s influence, and expose corruption.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) Romanticize the struggles of Filipinos under Spain.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) Focus solely on family devotion and self-sacrifice.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) Call for peaceful reform without exposing societal issues.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="q4">4. How did Rizal’s Noli Me Tangere differ in tone and theme compared to El Filibusterismo?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) Noli Me Tangere focused on bitterness, while El Filibusterismo emphasized beauty and romance.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) Noli Me Tangere was optimistic with romance and mercy, while El Filibusterismo was darker with themes of bitterness and rebellion.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) Both novels shared the same tone and theme.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) El Filibusterismo was purely about religion, while Noli Me Tangere tackled patriotism.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label for="q5">5. To whom did Rizal dedicate El Filibusterismo, and why?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) To Maria Clara, for her sacrifices.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) To the Filipino youth, for being the hope of the future.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) To the three martyred priests, Gomez, Burgos, and Zamora, for their unjust execution.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) To his family, for their unwavering support.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">Quiz Results</div>
+            <div class="modal-body">
+                <span id="scoreMessage"></span>
+            </div>
+            <div class="modal-footer">
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = {
+                q1: "B",
+                q2: "A",
+                q3: "A",
+                q4: "B",
+                q5: "C"
+            };
+
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            for (let question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
+            document.getElementById('myModal').style.display = "flex";
+            resetQuiz();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function resetQuiz() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(button => button.checked = false);
+        }
+    </script>
+</body>
+</html>

@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
+
     <div class="quiz-container">
         <h2>Module 3: Quiz#3</h2>
         
         <div id="quiz">
+            <!-- Question 1 -->
             <div class="question">
                 <label for="q1">1. When did Rizal disembark in Manila during his second homecoming?</label>
                 <div class="answers">
@@ -32,7 +34,8 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Question 2 -->
             <div class="question">
                 <label for="q2">2. What was one of the primary reasons Rizal decided to return to the Philippines in 1887?</label>
                 <div class="answers">
@@ -55,6 +58,7 @@
                 </div>
             </div>
 
+            <!-- Question 3 -->
             <div class="question">
                 <label for="q3">3. What was the reaction of Governor-General Terrero upon learning about *Noli Me Tangere*?</label>
                 <div class="answers">
@@ -73,6 +77,52 @@
                     <div class="answer">
                         <input type="radio" id="q3d" name="q3" value="D">
                         <label for="q3d">D) He ignored the book, considering it unimportant.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="q4">4. Who was Rizal's first mentor and teacher in his early childhood?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) His uncle</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) His brother Paciano</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) His father, Don Francisco</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) His mother, Doña Teodora</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label for="q5">5. What was one of Rizal's major observations during his studies at the University of Santo Tomas?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) The supportive and modern education system</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) The equality among Filipino and Spanish students</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) The oppressive and outdated teaching methods</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) The encouragement of Filipino cultural pride by the friars</label>
                     </div>
                 </div>
             </div>
@@ -105,13 +155,17 @@
             const answers = {
                 q1: "C",
                 q2: "C",
-                q3: "C"
+                q3: "C",
+                q4: "D",
+                q5: "C"
             };
 
             const userAnswers = {
                 q1: document.querySelector('input[name="q1"]:checked')?.value,
                 q2: document.querySelector('input[name="q2"]:checked')?.value,
-                q3: document.querySelector('input[name="q3"]:checked')?.value
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
             };
 
             for (let question in answers) {
@@ -120,7 +174,7 @@
                 }
             }
 
-            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 3`;
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
             document.getElementById('myModal').style.display = "flex";
             resetQuiz();
         }

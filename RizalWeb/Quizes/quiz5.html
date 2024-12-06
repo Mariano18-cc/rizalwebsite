@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>Module 5: Quiz#5</h2>
+        
+        <div id="quiz">
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="q1">1. What was the main reason for Rizal’s exile to Dapitan?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) His involvement in the Katipunan</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) The discovery of anti-friar leaflets in his sister's baggage</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) His refusal to apologize to the Spanish authorities</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) His alleged conspiracy with foreign powers</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="q2">2. Which of the following was not one of Rizal's activities during his exile in Dapitan?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) Farming</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) Establishing a cooperative</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) Writing a novel</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) Conducting archaeological excavations</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="q3">3. What was one of Rizal’s notable contributions to Dapitan’s infrastructure?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) Building a hospital</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) Constructing a dam and water system</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) Establishing a public library</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) Constructing a bridge</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="q4">4. Who was Josephine Bracken in Rizal's life?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) His sister</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) A patient he treated in Dapitan</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) His love interest and partner during his exile</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) A fellow nationalist working with him</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label for="q5">5. How did Rizal help empower the farmers in Dapitan?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) By providing them free seeds and equipment</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) By forming a cooperative to free them from exploitation by Chinese traders</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) By teaching them modern farming techniques</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) By introducing them to European agricultural methods</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">Quiz Results</div>
+            <div class="modal-body">
+                <span id="scoreMessage"></span>
+            </div>
+            <div class="modal-footer">
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = {
+                q1: "B",
+                q2: "C",
+                q3: "B",
+                q4: "C",
+                q5: "B"
+            };
+
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            for (let question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
+            document.getElementById('myModal').style.display = "flex";
+            resetQuiz();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function resetQuiz() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(button => button.checked = false);
+        }
+    </script>
+</body>
+</html>

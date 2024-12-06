@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>Module 9: Quiz#9</h2>
+        
+        <div id="quiz">
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="q1">1. According to Dr. Zeus Salazar, how does the concept of "bayani" differ from the western concept of "hero"?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A) A bayani focuses on individual achievements.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B) A bayani acts for the collective good of the community.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C) A bayani acts without considering others.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D) A bayani prioritizes personal gain.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="q2">2. What does the term "bayanihan" signify in the context of Filipino values?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A) An act of heroism solely for personal gain.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B) A group effort of helping others without expecting anything in return.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C) An individual act of bravery in war.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D) A political movement for independence.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="q3">3. What famous phrase of Rizal reflects his approach to reform and resistance?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A) "Unity is strength."</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B) "Freedom through arms."</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C) "The pen is mightier than the sword."</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D) "Education is wealth."</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="q4">4. Which of the following is NOT a criterion set by the National Heroes Commission for identifying a national hero?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A) They must aspire and struggle for the nation’s freedom.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B) They must have significantly contributed to the nation’s cultural heritage.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C) They must contribute to the quality of life and destiny of a nation.</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D) They must have a concept of nation.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label for="q5">5. Under what proclamation was the Philippine Eagle declared the national bird of the Philippines?</label>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A) Proclamation No. 1732</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B) Proclamation No. 615</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C) Republic Act No. 9850</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D) Republic Act No. 8491</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitQuiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">Quiz Results</div>
+            <div class="modal-body">
+                <span id="scoreMessage"></span>
+            </div>
+            <div class="modal-footer">
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submitQuiz");
+            submitButton.addEventListener("click", submitQuiz);
+        });
+
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = {
+                q1: "B",
+                q2: "B",
+                q3: "C",
+                q4: "C",
+                q5: "B"
+            };
+
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value,
+                q5: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            for (let question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('scoreMessage').textContent = `Your score: ${score} out of 5`;
+            document.getElementById('myModal').style.display = "flex";
+            resetQuiz();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function resetQuiz() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(button => button.checked = false);
+        }
+    </script>
+</body>
+</html>
