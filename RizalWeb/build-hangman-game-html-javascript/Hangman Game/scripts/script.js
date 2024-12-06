@@ -45,7 +45,7 @@ const gameOver = (isVictory) => {
     isGameOver = true; // Mark the game as over
     const modalText = isVictory ? `You found the word:` : "The correct word was:";
     gameModal.querySelector("img").src = `images/${isVictory ? "Thumbs up" : "Over"}.gif`;
-    gameModal.querySelector("h4").innerText = isVictory ? "Ikaw ang pag-asa nang bayan" : "Game Over!";
+    gameModal.querySelector("h4").innerText = isVictory ? "Ikaw ang pag-asa ng bayan" : "Game Over!";
     gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
     gameModal.classList.add("show");
 
