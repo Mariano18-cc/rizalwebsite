@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat; 
     height: 100vh; 
     margin: 0; 
+    overflow: hidden;
 }
 
 .container {
@@ -20,16 +21,19 @@ body {
 }
 
 .panel {
-    display: flex;
-    align-items: center;  
-    background-color: transparent; /* Make the panel completely transparent */
-  
+    top: 0; /* Aligns the panel to the top */
+    left: 0; /* Aligns the panel to the left */
+    width: 100%; /* Makes the panel extend across the full width of the screen */
+    background-color: rgba(0, 0, 0, 0.1); /* Light transparency */
+    padding: 10px; /* Adds some space inside the panel */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    z-index: 1000; /* Ensures the panel appears on top of other content */
 }
 
 .panel h1 {
     font-size: 1.8rem;
     margin: 0;
-    margin-right: 20px; /* Space between title and buttons */
+    margin-right: 30px; /* Space between title and buttons */
 }
 
 .button-container {
@@ -41,24 +45,30 @@ body {
 button#intro, #ack, #game, .mod, .quiz {
     padding: 8px 12px;
     font-size: 1rem;
-    background-color: #007bff00;
+    background-color: hsla(0, 0%, 0%, 0);
     color: black;
     border: none;
+    font-size: large;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, color 0.5s; /* Added transition for color */
+
 }
 
 button#intro:hover, #ack:hover, #game:hover, .mod:hover, .quiz:hover {
-    background-color: rgba(239, 239, 239, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fdfeff; /* Change text color on hover */
 }
 
 
+
 /* Dropdown styles */
-/* Dropdown Container */
+/* Dropdown Container */    
 .dropdown {
     position: relative;
     display: inline-block;
+    font-weight: bold;
 }
 
 /* Dropdown Menu */

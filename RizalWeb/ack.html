@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acknowledgment</title>
     <link rel="stylesheet" href="Style/ack.css">
+    <style>
+        /* Hover effect for back button */
+        a.back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: #000000;
+            color: rgb(252, 246, 246);
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a.back-button:hover {
+            background-color: #ffffff; /* Darker blue on hover */
+            color: rgb(0, 0, 0);
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+        }
+    </style>
 </head>
 <body>
+    <a href="javascript:history.back()" class="back-button">Back</a>
     <div class="panel">
         <h1 id="ack">Acknowledgment</h1>
         <p>

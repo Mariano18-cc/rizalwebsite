@@ -12,24 +12,75 @@ body {
 
 .container {
     text-align: center;
+    color: white; /* Ensure the text stands out */
+    animation: fadeIn 1.5s ease-out; /* Animation to fade the container in */
 }
 
+/* Header Styling with Animation */
 h1 {
     font-size: 4rem;
     margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(9, 9, 9); /* Add a color that stands out */
+    letter-spacing: 3px; /* Spaced-out letters for a dynamic look */
+    animation: slideIn 1s ease-out; /* Header slide-in animation */
 }
 
+/* Button Styling */
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1.2rem;
     background-color: rgb(255, 217, 0);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    animation: bounce 1s ease-out infinite alternate; /* Bounce animation */
 }
 
+/* Hover effects to make the button more alive */
 button:hover {
     background-color: rgb(198, 169, 4);
+    transform: scale(1.1); /* Slightly increase button size */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker, more prominent shadow */
+}
+
+/* Active button effects */
+button:active {
+    transform: scale(1); /* Reset scale on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Less shadow when clicked */
+}
+
+/* Animations for elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }

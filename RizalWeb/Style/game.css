@@ -8,12 +8,16 @@ body {
     background-repeat: no-repeat; 
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack content vertically (header, button, text) */
 }
 
 .container {
     text-align: center; /* Center the content inside the container */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 button {
@@ -32,6 +36,7 @@ button {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     font-family: 'Courier New', Courier, monospace; /* Old-style typewriter font */
+    margin-bottom: 20px; /* Space between button and paragraph */
 }
 
 button#hman {
@@ -59,4 +64,6 @@ p {
     font-weight: bold; /* Bold text */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Light shadow for old-style effect */
     text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Space at the bottom of the paragraph */
 }
+    
