@@ -58,4 +58,5 @@ p {
     font-family: 'Georgia', serif; /* Old-style font for the paragraph */
     font-weight: bold; /* Bold text */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Light shadow for old-style effect */
+    text-align: center; /* Center-align the text */
 }
